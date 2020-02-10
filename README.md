@@ -11,6 +11,6 @@ run it by
 
 ## Append the following cronjob entry:
 ## Monitor remote host every 30 minutes using monitorHost
-```10 * * * * /home/alok/bin/monitorHost```
+```10 * * * * /home/alok/bin/server_load```
 
 Save and close the file.
