@@ -5,7 +5,7 @@ do
 
 for a in {01..09}
 do
-echo -e "\nChecking ping test on ts0$a"
+echo -e "\nChecking Memory and CPU Usage on ts0$a"
 ram_usages=$(ssh "ts0$a"i free | awk '/Mem/{printf("RAM Usage: %.2f\n"), $3/$2*100}'| awk '{print $3}')
 cpu_usages=$(ssh "ts0$a"i top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')
 echo "Ram Usages:" $ram_usages
