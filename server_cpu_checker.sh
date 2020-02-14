@@ -39,7 +39,7 @@ echo "+---------------------------------------------------+"
 for b in {20..41} {46..60} {67..70} {75..102}
 do
 echo -e "\nChecking CPU Usage on serv$b"
-cpu_use_server=$(ssh "ts0$a"i top -b -n1 | awk '/^Cpu/ {print $2}' | cut -d. -f1)
+cpu_use_server=$(ssh "serv$b"i top -b -n1 | awk '/^Cpu/ {print $2}' | cut -d. -f1)
 echo "CPU Used:" $cpu_use_server%
 if [ $cpu_use_server -gt 85 ]; then
 SUBJECT="ATTENTION: CPU Load Is High on serv$b at $(date)"
@@ -48,7 +48,7 @@ TO="alok.sinha@alok.com"
   echo -e "\nCPU Current Usage is: $cpu_use_server%\n" >> $MESSAGE
   echo "+------------------------------------------------------------------+" >> $MESSAGE
 
-  echo "Top CPU Process running on ts0$a" >> $MESSAGE
+  echo "Top CPU Process running on serv$b" >> $MESSAGE
 
   echo "+------------------------------------------------------------------+" >> $MESSAGE
 
