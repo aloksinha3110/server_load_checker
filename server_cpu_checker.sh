@@ -15,7 +15,7 @@ echo "CPU Used:" $cpu_use%
 if [ $cpu_use -gt 85 ]; then
 SUBJECT="ATTENTION: CPU Load Is High on ts0$a at $(date)"
 MESSAGE="/tmp/Mail.out"
-TO="alok.sinha@octro.com"
+TO="alok.sinha@alok.com"
   echo -e "\nCPU Current Usage is: $cpu_use%\n" >> $MESSAGE
   echo "+------------------------------------------------------------------+" >> $MESSAGE
 
@@ -44,7 +44,7 @@ echo "CPU Used:" $cpu_use_server%
 if [ $cpu_use_server -gt 85 ]; then
 SUBJECT="ATTENTION: CPU Load Is High on serv$b at $(date)"
 MESSAGE="/tmp/Mail.out"
-TO="alok.sinha@octro.com"
+TO="alok.sinha@alok.com"
   echo -e "\nCPU Current Usage is: $cpu_use_server%\n" >> $MESSAGE
   echo "+------------------------------------------------------------------+" >> $MESSAGE
 
