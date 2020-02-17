@@ -87,7 +87,7 @@ if [[ $ram_use2 -gt $avg_c ]]; then
 
 SUBJECT="ATTENTION: Memory Utilization is High on serv$b at $(date)"
 MESSAGE="/tmp/Mail.out"
-TO="alok.sinha@octro.com"
+TO="alok.sinha@alok.com"
 echo -e "\nCurrent RAM Usage on serv$b is: $ram_use2 GB\n" >> $MESSAGE
 echo "+------------------------------------------------------------------------------------+" >> $MESSAGE
 
