@@ -24,8 +24,7 @@ if [[ $response = "greater" ]] ; then
 echo " There is issue with ts0$a Server. Sending you an alert."
 SUBJECT="ATTENTION: CPU Load Is High on ts0$a at $(date)"
 MESSAGE="/tmp/Mail.out"
-TO="alok.sinha@octro.com"
- #rishabh.aggarwal@octro.com"
+TO="alok.sinha@alok.com"
   echo -e "\nCPU Current Usage is: $load\n" >> $MESSAGE
   echo -e "\nLoad Average Over the Last: 1mint: $LOAD1MIN, 5mint: $LOAD5MIN, 15mint: $LOAD15MIN\n" >> $MESSAGE
   echo "+------------------------------------------------------------------+" >> $MESSAGE
